@@ -3,8 +3,8 @@ branches:
     - master
     - develop
 script:
-  - docker ps -a
-  - /bin/bash scripts/publish.sh
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - ./scripts/publish.sh
 services:
   - docker
 sudo: required
