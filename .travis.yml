@@ -1,1 +1,11 @@
-script: ./scripts/publish.sh
+branches:
+  only:
+    - master
+    - develop
+script:
+  - docker ps -a
+  - /bin/bash scripts/publish.sh
+services:
+  - docker
+sudo: required
+
