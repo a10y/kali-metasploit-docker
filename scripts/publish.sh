@@ -1,4 +1,5 @@
 #!/bin/bash
+set -oe pipefail
 
 cd $(dirname $0)/..
 
